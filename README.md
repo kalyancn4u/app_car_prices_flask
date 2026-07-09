@@ -797,3 +797,13 @@ entry links to the section with the full detail; this is the index.
     dependency and changes how `car_model.py` calls `.predict()`). Listed
     with reasoning in
     [Repository size & Git LFS](#repository-size--git-lfs--do-we-need-it).
+
+---
+
+### 🔗 The Car Prices Trio
+
+Three sibling projects built on the same Cars24 dataset:
+
+- 🎛️ **[Streamlit web app →](https://github.com/kalyancn4u/app_streamlit_car_prices)** — interactive price-predictor UI
+- 🐳 **Flask REST API** — containerised API (Docker + AWS ECS/Fargate) · _you are here_
+- 🔬 **[MLOps lifecycle →](https://github.com/kalyancn4u/app_mlops_car_prices)** — full SDLC: notebooks → production pipeline
