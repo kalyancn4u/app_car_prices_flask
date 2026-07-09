@@ -1,0 +1,24 @@
+# -----------------------------------------------------------------------------
+# Git LFS tracking rules — provided but DELIBERATELY LEFT COMMENTED OUT.
+#
+# None of the files in this repo currently need LFS — price_model.pkl (the
+# largest artifact) is ~8.9 MB, and the whole repo is ~11 MB, well under
+# GitHub's 50 MiB "you'll get a warning" threshold, let alone the 100 MiB hard
+# block (see README.md "Repository size" section for the reasoning and sources).
+#
+# The rules below are kept COMMENTED so that plain `git add` / `git commit`
+# stores these files as normal git blobs (which is exactly what you want at
+# this size). If a future retrain with deeper trees / more estimators, or a
+# bigger dataset, pushes any artifact toward GitHub's 100 MiB limit, simply
+# UNCOMMENT the matching line(s) below, then:
+#
+#     git lfs install                       # one-time per machine
+#     git add .gitattributes <the big file>
+#     git commit -m "Track large files with Git LFS"
+#
+# (Context: these same forests once hit ~187 MB combined early in development,
+# before depth-bounding — so the rules are pre-written for exactly that case.)
+# -----------------------------------------------------------------------------
+# *.pkl    filter=lfs diff=lfs merge=lfs -text
+# *.csv    filter=lfs diff=lfs merge=lfs -text
+# *.csv.gz filter=lfs diff=lfs merge=lfs -text

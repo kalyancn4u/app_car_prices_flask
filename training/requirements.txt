@@ -1,0 +1,9 @@
+# Dependencies for RETRAINING the models — deliberately kept separate from
+# the parent requirements.txt (which is for SERVING them). Training needs
+# pandas' full data-wrangling stack; the Flask API never imports any of the
+# training-only tools, so the served Docker image stays small and doesn't
+# pull in packages it will never use.
+joblib==1.4.2
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.6.1

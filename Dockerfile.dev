@@ -1,0 +1,27 @@
+# =============================================================================
+# DEV image — serves the API with Flask's own built-in server.
+#
+# Build it with:
+#     docker build -f Dockerfile.dev -t car-price-api:dev .
+#
+# Use this only for local development or a quick demo. Flask's built-in
+# server is single-threaded by default: it can only be "doing" one request
+# at a time, has no protection against a slow client tying it up, and its
+# own documentation explicitly says not to use it in production. It exists
+# here purely because it's the simplest possible way to run the app — no
+# extra concepts (workers, WSGI) to learn — which makes it a good first
+# step before switching to the production Dockerfile.
+# =============================================================================
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY app.py car_model.py wsgi.py ./
+COPY models/ ./models/
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
