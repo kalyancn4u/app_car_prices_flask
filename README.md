@@ -806,10 +806,11 @@ entry links to the section with the full detail; this is the index.
 
 ---
 
-### 🔗 The Car Prices Trio
+### 🔗 The Car Prices Quartet
 
-Three sibling projects built on the same Cars24 dataset:
+Four sibling projects built on the same Cars24 dataset:
 
 - 🎛️ **[Streamlit web app →](https://github.com/kalyancn4u/app_streamlit_car_prices)** — interactive price-predictor UI
 - 🐳 **Flask REST API** — containerised API (Docker + AWS ECS/Fargate) · _you are here_
 - 🔬 **[MLOps lifecycle →](https://github.com/kalyancn4u/app_mlops_car_prices)** — full SDLC: notebooks → production pipeline
+- 🛠️ **[Pipeline starter →](https://github.com/kalyancn4u/app_pipeline_car_prices)** — beginner-friendly guide + test stubs to extend
