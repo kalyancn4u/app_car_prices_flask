@@ -82,10 +82,16 @@ pip install -r requirements.txt
 # Sanity check the prediction logic against the real trained models:
 pip install pytest
 pytest tests/ -v
+# -> 8 passed (tests/test_app.py) + skipped guided stubs (tests/test_stubs.py)
 
 # Run the dev server:
 python app.py
 ```
+
+> 🧪 **Learning to test & debug?** [`docs/TESTING_GUIDE.md`](docs/TESTING_GUIDE.md) walks you
+> from "what is a test?" to mastery, and [`tests/test_stubs.py`](tests/test_stubs.py) is a
+> graded ladder of guided exercises (including regression tests for the 405 and auto-fill
+> behaviours) — complete each stub to turn it green.
 
 Then, in another terminal:
 
